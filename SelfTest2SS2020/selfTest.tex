@@ -1,0 +1,92 @@
+
+
+\documentclass[12pt,a4paper,fleqn]{report}
+
+%%% packages for mathematical typesetting
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{times}
+\usepackage{bm}
+%%% package for inclusing figures
+\usepackage{graphicx}
+%%% package for nicer table layout
+\usepackage{booktabs}
+%%% package for color mangement
+\usepackage[svgnames]{xcolor}
+%%% package for page headings and footers
+\usepackage{fancyhdr}
+
+%
+% if you include graphics files, LaTeX will search
+% for them in the directories specified here 
+%
+\graphicspath{{./}, {./Figures/}}
+%
+
+
+
+%
+% specifications for page / text layout
+% DO NOT EDIT THE FOLLOWING
+%
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{fancy}
+\cfoot{}
+\frenchspacing
+\setlength{\headheight}{15pt}
+\def\thesection{\arabic{section}.}
+\setlength{\parindent}{0pt}
+%
+
+
+
+%%% vectors, matrices, and tensors
+\renewcommand{\vec}[1]{\bm{#1}}
+\newcommand{\mat}[1]{\bm{#1}}
+
+%%% squared Euclidean distance
+\newcommand{\dsq}[2]{\bigl \lVert #1 - #2 \bigr \rVert^2}
+
+%%% transposition
+\newcommand{\trn}[1]{#1^\intercal}
+
+%%% sets
+\newcommand{\set}[1]{\mathcal{#1}}
+
+%%% probability and conditional probability
+\newcommand{\prob}[1]{p\bigl( #1 \bigr)}
+\newcommand{\cprob}[2]{p\bigl( #1 \bigm| #2 \bigr)}
+
+%%% typesetting python code
+\usepackage{fancyvrb} 
+\usepackage{listings}
+\lstdefinestyle{Python}{%
+	language=Python,
+	tabsize=4,
+	basicstyle=\ttfamily,
+	stringstyle=\color{ForestGreen},
+	keywordstyle=\color{BlueViolet},
+	commentstyle=\itshape\color{DarkRed!90},
+	identifierstyle=,
+	emphstyle=\color{Blue},
+	frame=none,	
+	showstringspaces=false,
+	morekeywords={range, len, self, lambda, from, import, as, False, True, enumerate, xrange, 
+	              map, list, set, float, int, min, max, sorted, None},
+	fancyvrb=true,
+}
+\lstnewenvironment{PythonCode}[1][]{\lstset{style=Python,#1}}{}
+
+
+
+
+
+\begin{document}
+
+\lhead{\small \emph{Game AI, self test (2), 2020}}
+\rhead{\small \emph{page } \thepage}
+
+\input{selfTestProblem1}
+\input{selfTestProblem2}
+
+\end{document}

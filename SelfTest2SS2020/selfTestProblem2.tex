@@ -1,0 +1,58 @@
+
+\color{black}
+\subsection*{action primitives from in-game data}
+
+Given the sequence
+\begin{equation*}
+\vec{x}[1]:\vec{x}[2]:\vec{x}[3]:\vec{x}[3]:\cdots:\vec{x}[n]
+\end{equation*}
+of subsequent 3D locations contained in file \texttt{q3dm1-path2.csv}, compute a sequence
+\begin{equation*}
+\vec{v}[1]:\vec{v}[2]:\vec{v}[3]:\vec{x}[3]:\cdots:\vec{v}[n-1]
+\end{equation*}
+of velocity vectors where 
+\begin{equation*}
+\vec{v}[t] = \vec{x}[t+1] - \vec{x}[t]
+\end{equation*}
+
+
+
+
+
+\vspace{2cm}
+Given your sequence of velocity vectors, compute their average
+\begin{equation*}
+\mathbb{E} \bigl[ \vec{v} \bigr] = \frac{1}{n-1} \sum_{t=1}^{n-1} \vec{v}[t]
+\end{equation*}
+Enter your result here. That is, replace the dots in the following expression by the appropriate numbers rounded to \emph{four} decimals. \color{blue}
+%%%%%
+%%%%% enter your answer here, i.e. replace the \ldots with the numbers you computed
+%%%%%
+\begin{equation*}
+\mathbb{E} \bigl[ \vec{v} \bigr] = \begin{bmatrix} -0.338 \\  0.1112 \\ 0.     \end{bmatrix}
+\end{equation*}
+%%%%%
+%%%%%
+%%%%%
+\color{black}
+
+
+
+
+
+\vspace{2cm}
+Run $k$-means clustering on the velocity vectors $\vec{v}[t]$ to estimate representative velocities or \emph{action primitives} $\vec{a}_1, \vec{a}_2, \ldots, \vec{a}_k$. For $k=24$, compute the average
+\begin{equation*}
+\mathbb{E} \bigl[ \vec{a} \bigr] = \frac{1}{k} \sum_{i=1}^{k} \vec{a}_i
+\end{equation*}
+Enter your result here. That is, replace the dots in the following expression by the appropriate numbers rounded to \emph{four} decimals. \color{blue}
+%%%%%
+%%%%% enter your answer here, i.e. replace the \ldots with the numbers you computed
+%%%%%
+\begin{equation*}
+\mathbb{E} \bigl[ \vec{a} \bigr] = \begin{bmatrix} -7.8100e-02 \\ -5.9163e+00 \\ -4.0000e-04 \end{bmatrix}
+\end{equation*}
+%%%%%
+%%%%%
+%%%%%
+\color{black}

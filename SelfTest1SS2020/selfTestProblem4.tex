@@ -1,0 +1,47 @@
+
+\color{black}
+\subsection*{Stationary distribution a Markov model}
+
+Compute the stationary distribution
+\begin{equation*}
+\vec{\pi} = \mat{P}_{\lambda_1} \vec{\pi}
+\end{equation*}
+of the Markov chain $\lambda_1$. Proceed as follows: introduce 
+\begin{equation*}
+  \mat{A} = \begin{bmatrix} \mat{I} - \mat{P}_{\lambda_1} \\ \trn{\vec{1}} \end{bmatrix} \qquad \text{and} \qquad 
+  \vec{b} = \begin{bmatrix} \vec{0} \\ 1 \end{bmatrix}
+\end{equation*}
+where the matrix $\mat{I}$ and the vector $\vec{0}$ and $\vec{1}$ have to be of appropriate sizes. Then solve
+\begin{equation*}
+\mat{A} \, \vec{\pi} = \vec{b}
+\end{equation*}
+for $\vec{\pi}$. Round your result to two decimals.
+\color{blue}
+%%%%%
+%%%%% enter your answer after the '=' sign
+%%%%%
+\begin{equation*}
+\vec{\pi} = \begin{bmatrix} 0.33333333 \\ 0.33333333 \\ 0.33333333 \end{bmatrix}
+\end{equation*}
+%%%%%
+%%%%%
+%%%%%
+\color{black}
+
+If you like, paste the code you used to practically compute your result after the following \texttt{import} statements
+\color{blue}
+%%%%%
+%%%%% paset your code after the import statements
+%%%%%
+\begin{PythonCode}
+import numpy as np
+import numpy.linalg as la
+
+
+\end{PythonCode}
+%%%%%
+%%%%%
+%%%%%
+\color{black}
+
+

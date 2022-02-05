@@ -1,0 +1,39 @@
+
+\color{black}
+\subsection*{Sampling a Markov model}
+
+Given a given Markov chain $\lambda$ over some state space $\set{S}$, the following procedure generates a sequence of states $\vec{s} = s[0] s[1] s[2] \cdots$ 
+\begin{itemize}
+\item[] manually initialize $s[0] \in \set{S}$
+\item[] if $s[t-1] = s_i$, \emph{draw} $s[t] = s_j$ according to $\cprob{s_j}{s_i}$, that is select
+\begin{equation*}
+s_j \sim \bigl( \mat{P}_\lambda \bigr)_{ji}
+\end{equation*}
+\end{itemize}
+where $\mat{P}_\lambda$ is the state transition probability matrix of the process $\lambda$. \\[1ex]
+
+Using matrix $\mat{P}_{\lambda_1}$, generate a sequence $\vec{s}$ of $200$ states where $s[0] = A$. That is, replace the dots in the following expression by $199$ symbols sampled according to the above algorithm. 
+\color{blue}
+%%%%%
+%%%%% enter your answer after the letter 'A'
+%%%%%
+\\\\
+$ \vec{s} = $ A A B B A A B A B B C A A C A A A C C B B A C C A B C A B A B A B C A B C A B A C A A A B C C B C A B C A A A A A B C C A B B B C A B A B C C C C A C C A B C A B C A B B C C A A B B C C B C C A B C B A B C A C C A B C C B C B B C A A B C B C B B A A B C A A B C A C C A B B C C A B B C A B B A C C C B C A C A B C A B C A C B A B A B B C B A B C C B C B C A A B B C A A A B C A B C C A C A A A B A B
+\\ 
+%%%%%
+%%%%%
+%%%%%
+\color{black}
+
+Using matrix $\mat{P}_{\lambda_1}$, generate $n=1000$ sequences $\vec{s}_l$ of length $200$ where $s_l[0] = A$ for all $l$. Compute their average log-likelihood 
+\color{blue}
+%%%%%
+%%%%% enter your answer after the '=' sign
+%%%%%
+\begin{equation*}
+\frac{1}{n} \sum_{l=1}^n  \mathcal{L}\bigl( \vec{s}_l \bigr) = -205.06
+\end{equation*}
+%%%%%
+%%%%%
+%%%%%
+\color{black}

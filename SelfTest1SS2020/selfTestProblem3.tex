@@ -1,0 +1,27 @@
+
+\color{black}
+\subsection*{Learning a Markov model}
+
+Given a state sequence $\vec{s}$ such as the one you just created, we may use maximum likelihood estimation techniques to estimate or ``learn'' a Markov model $\lambda_{MLE}$ that is most likely to have produced $\vec{s}$.
+
+Maximum likelihood estimates of the entries of the corresponding matrix $\mat{P}_{\lambda_{MLE}}$ are given by
+\begin{equation*}
+\bigl( \mat{P}_{\lambda_{MLE}} \bigr)_{ji} = \frac{n_{ji}}{\sum_j n_{ji}}
+\end{equation*}
+where the quantity $n_{ji}$ counts how often the transition $s_i \rightarrow s_j$ occurs in sequence $\vec{s}$.
+
+Given the ``training'' sequence $\vec{s}$ you created above, compute the entries of $\mat{P}_{\lambda_{MLE}}$. Round your results to two decimals.
+\color{blue}
+%%%%%
+%%%%% enter your answer after the '=' sign
+%%%%%
+\begin{equation*}
+\mat{P}_{\lambda_{MLE}} = \begin{bmatrix} 0.3 & 0.2 & 0.5 \\ 0.5 & 0.3 & 0.2 \\ 0.2 & 0.5 & 0.3 \end{bmatrix}
+\end{equation*}
+%%%%%
+%%%%%
+%%%%%
+\color{black}
+
+
+
